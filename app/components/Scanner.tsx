@@ -250,6 +250,7 @@ const ScannerComponent = () => {
           options={{
             delayBetweenScanAttempts: 1000,
           }}
+          components={{ tracker: true }}
           styles={{
             // finderBorder: 0,
             container: {
