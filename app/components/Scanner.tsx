@@ -1,10 +1,16 @@
 "use client";
 
-import { Scanner } from "@yudiel/react-qr-scanner";
+// import { Scanner } from "@yudiel/react-qr-scanner";
 import { CSSProperties, useEffect, useState } from "react";
 import { Type, Grid, Sunrise, Sunset, Hash, Settings } from "react-feather";
 import { useRouter } from "next/navigation";
 import { supabase } from "@/utils/supabase";
+import dynamic from "next/dynamic";
+
+const Scanner = dynamic(
+  () => import("@yudiel/react-qr-scanner").then((mod) => mod.Scanner),
+  { ssr: false }
+);
 
 const ScannerComponent = () => {
   const [mainThemeColor, setMainThemeColor] = useState("sky");
