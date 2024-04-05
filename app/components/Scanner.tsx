@@ -204,7 +204,7 @@ const ScannerComponent = () => {
 
   return (
     <>
-      <div className="flex justify-center items-center h-[100svh] select-none overflow-y-hidden">
+      <div className="flex justify-center items-center h-[100svh] select-none overflow-y-hidden bg-black">
         <div
           className={`${
             isAttendanceEnable ? "justify-between" : "justify-end"
@@ -283,7 +283,7 @@ const ScannerComponent = () => {
         )} */}
 
         <p
-          className={`z-50 absolute bottom-3 bg-[${mainThemeColor}]-600 rounded-full px-2 py-1 text-xs`}>
+          className={`z-50 absolute bottom-3 bg-[${mainThemeColor}]-600 rounded-full px-2 py-1 text-xs text-white`}>
           Created by <span className=" font-bold">Shaun Niel Ochavo</span>
         </p>
       </div>
